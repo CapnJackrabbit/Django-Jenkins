@@ -4,11 +4,11 @@ pipeline
 
     stages
     {
-        stage('Hello')
+        stage('Validações')
         {
             steps
             {
-                echo 'Olá mundo!'
+                sh 'python -V'
             }
         }
     }
