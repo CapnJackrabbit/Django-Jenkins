@@ -31,8 +31,8 @@ pipeline
         {
             steps
             {
-                sh 'find . -name \\*py | xargs pylint -f parseable | tee pylint.log'
-                sh 'find . -name \\*py | xargs pycodestyle | tee pep8.log'
+                sh 'sudo find . -name \\*py | xargs pylint -f parseable | tee pylint.log'
+                sh 'sudo find . -name \\*py | xargs pycodestyle | tee pep8.log'
             }
         }
     }
