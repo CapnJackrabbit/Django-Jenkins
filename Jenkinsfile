@@ -4,7 +4,7 @@ pipeline
     {
         docker
         {
-            image 'python:3.11'
+            image 'python:3.7'
             args '-u root:root'
         }
     }
@@ -31,8 +31,8 @@ pipeline
         {
             steps
             {
-                sh 'sudo find . -name \\*py | xargs pylint -f parseable | tee pylint.log'
-                sh 'sudo find . -name \\*py | xargs pycodestyle | tee pep8.log'
+                sh 'find . -name \\*py | xargs pylint -f parseable | tee pylint.log'
+                sh 'find . -name \\*py | xargs pycodestyle | tee pep8.log'
             }
         }
     }
